@@ -12,8 +12,6 @@ public abstract class Command implements CommandExecutor, TabCompleter {
 	private final String name;
 	private final List<String> aliases;
 	
-	
-	
 	public Command(String name, String...aliases) {
 		super();
 		this.name = name;
@@ -42,5 +40,4 @@ public abstract class Command implements CommandExecutor, TabCompleter {
 		onCommand(s, args);
 		return true;
 	}
-
 }

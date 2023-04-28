@@ -20,5 +20,4 @@ public class Quests extends Command {
 	public void onCommand(CommandSender s, String[] args) {
 		
 	}
-
 }

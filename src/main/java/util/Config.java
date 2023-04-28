@@ -15,20 +15,16 @@ import java.util.Set;
 import java.util.logging.Level;
 
 public class Config {
-	
-	private final String name;
-	
-	private final File file;
-	
+
 	private FileConfiguration fileConfiguration;
+	private final File file;
+	private final String name;
 
 	public Config(String name) {
 		this.name = name;
 	    file = new File(Main.instance.getDataFolder() + "/" + name);
 	}
 
-
-	
 	public void reloadConfig() {
 		fileConfiguration = YamlConfiguration.loadConfiguration(file);
 		InputStream defConfigStream = Main.instance.getResource(name);

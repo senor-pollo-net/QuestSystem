@@ -17,9 +17,7 @@ public class CommandManager {
 			Objects.requireNonNull(Main.instance.getCommand(c.getName())).setExecutor(c);
 			if(c.getAliases().isEmpty())
 				return;
-			
 			Objects.requireNonNull(Main.instance.getCommand(c.getName())).setAliases(c.getAliases());
 		}
 	}
-
 }

@@ -1,20 +1,14 @@
 package main;
 
-import quest.QuestManager;
 import util.Config;
 
 public class QS {
-	
-	private final Main main;
-	
-	public QuestManager questManager;
-	
-	public Config questsYML;
-	
+
 	public Config playersYML;
-	
+	public Config questsYML;
 	public static QS get;
-	
+	private final Main main;
+
 	public QS(Main main) {
 		this.main = main;
 		QS.get = main.qs;
@@ -25,12 +19,8 @@ public class QS {
 	}
 
 	public void onEnable() {
-		questManager = new QuestManager();
-		
 		questsYML = new Config("quests.yml");
 		playersYML = new Config("players.yml");
-		
-		questManager.load();
 	}
 
 	public void onDisable() {
@@ -40,5 +30,4 @@ public class QS {
 	public void onLoad() {
 		
 	}
-
 }

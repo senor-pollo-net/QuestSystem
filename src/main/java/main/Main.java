@@ -10,9 +10,8 @@ import java.util.List;
 public final class Main extends JavaPlugin {
 
     public static final Main instance = getPlugin(Main.class);
-
     private final List<Listener> listeners = new ArrayList<>();
-    private QS qs;
+    QS qs;
 
     @Override
     public void onLoad() {
